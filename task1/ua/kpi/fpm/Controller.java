@@ -1,4 +1,4 @@
-package ua.kpi.fpm;
+package task1.ua.kpi.fpm;
 
 import java.util.Objects;
 import java.util.Scanner;
