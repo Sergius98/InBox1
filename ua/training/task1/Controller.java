@@ -1,4 +1,4 @@
-package task1.ua.kpi.fpm;
+package ua.training.task1;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -23,15 +23,15 @@ public class Controller {
         model.setValue(inputStringWithScanner("Hello", View.INPUT_HELLO_STRING, sc));
         model.concatenateStrings(inputStringWithScanner("world!", View.INPUT_WORLD_STRING, sc));
 
-        view.printMessage(view.OUR_STRING + "\"" + model.getValue() + "\"");
+        view.printMessage(View.OUR_STRING + "\"" + model.getValue() + "\"");
     }
 
     // The Utility methods
-    public String inputStringWithScanner(String str, String msg, Scanner sc) {
+    public String inputStringWithScanner(String expectedString, String msg, Scanner sc) {
     	String input;
         view.printMessage(msg);
         input = sc.nextLine();
-        while(!Objects.equals(str, input)) {
+        while(!Objects.equals(expectedString, input)) {
             view.printMessage(View.WRONG_INPUT_STRING_DATA + msg);
             input = sc.nextLine();
         }

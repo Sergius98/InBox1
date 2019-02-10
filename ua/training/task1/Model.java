@@ -1,4 +1,4 @@
-package task1.ua.kpi.fpm;
+package ua.training.task1;
 
 /**
  * Created by M on 02/07/2019

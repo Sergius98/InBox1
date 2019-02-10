@@ -1,4 +1,4 @@
-package task1.ua.kpi.fpm;
+package ua.training.task2;
 
 public class Main {
 
