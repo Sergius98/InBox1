@@ -1,6 +1,5 @@
 package ua.training.task2;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Controller {
@@ -17,8 +16,10 @@ public class Controller {
     public void processUser(){
         Scanner sc = new Scanner(System.in);
         boolean won = false;
-        while(!won) {
+
+        while (!won) {
             int number = inputIntValueWithScanner(sc);
+
             switch (model.checkNumber(number)){
                 case -1: view.printMessage(View.YOUR_NUMBER_IS_TOO_LOW);
                     break;
@@ -33,8 +34,9 @@ public class Controller {
     }
 
     // The Utility methods
-    private int inputIntValueWithScanner (Scanner sc){
+    private int inputIntValueWithScanner(Scanner sc){
         int number;
+
         while (true) {
             view.printMessage(View.INPUT_A_NUMBER_IN_RANGE, model.getMin(), model.getMax());
             while (!sc.hasNextInt()){

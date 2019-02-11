@@ -10,6 +10,7 @@ public class Model {
 
     public Model() {
         Random r = new Random();
+
         attempts = 0;
         min = 0;
         max = 100;
