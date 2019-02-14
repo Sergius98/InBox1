@@ -6,6 +6,7 @@ public class Model {
     public Model() {
         record = new Record();
     }
+
     public void setName(String name){
         record.name = name;
     }
@@ -15,6 +16,17 @@ public class Model {
     public void setSurname(String surname){
         record.surname = surname;
     }
+
+    public void setShortFullName(String shortFullName){
+        record.shortFullName = shortFullName;
+    }
+    public void setNickname(String nickname){
+        record.nickname = nickname;
+    }
+    public void setComment(String comment){
+        record.comment = comment;
+    }
+
     public String getName(){
         return record.name;
     }
@@ -23,5 +35,15 @@ public class Model {
     }
     public String getSurname(){
         return record.surname;
+    }
+
+    public String getShortFullName(){
+        return record.shortFullName;
+    }
+    public String getNickName(){
+        return record.nickname;
+    }
+    public String getComment(){
+        return record.comment;
     }
 }
