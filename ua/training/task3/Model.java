@@ -27,6 +27,21 @@ public class Model {
         record.comment = comment;
     }
 
+    public void setGroups(String groups){
+        record.groups = groups;
+    }
+    public void setCityPhoneNumber(String cityPhoneNumber){
+        record.cityPhoneNumber = cityPhoneNumber;
+    }
+    public void setMobilePhoneNumber(String mobilePhoneNumber){
+        record.mobilePhoneNumber = mobilePhoneNumber;
+    }
+    public void setMobilePhoneNumber2(String mobilePhoneNumber2){
+        record.mobilePhoneNumber2 = mobilePhoneNumber2;
+    }
+
+
+
     public String getName(){
         return record.name;
     }
@@ -45,5 +60,19 @@ public class Model {
     }
     public String getComment(){
         return record.comment;
+    }
+
+
+    public String getGroups(){
+        return record.groups;
+    }
+    public String getCityPhoneNumber(){
+        return record.cityPhoneNumber;
+    }
+    public String getMobilePhoneNumber(){
+        return record.mobilePhoneNumber;
+    }
+    public String getMobilePhoneNumber2(){
+        return record.mobilePhoneNumber2;
     }
 }

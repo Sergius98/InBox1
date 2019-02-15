@@ -4,4 +4,12 @@ public class Constants {
     public static final String NAME_REG_EX = "[A-Z][a-zA-Z]*";
     public static final String SECOND_NAME_REG_EX = "[A-Z][a-zA-Z]*";
     public static final String SURNAME_REG_EX = "[A-Z][a-zA-Z'.-]*";
+    public static final String SHORT_FULL_NAME_REG_EX = "[A-Z][a-zA-Z]*[ ][A-Z]\\.";
+    public static final String NICKNAME_REG_EX = "[\\w-\\.]+";
+    public static final String COMMENT_REG_EX = ".{0,40}";
+    public static final String GROUPS_REG_EX = "[A-Z]+[, [A-Z]+]*";
+    public static final String CITY_PHONE_NUMBER_REG_EX = "[\\+]?[\\d]{3}(?<whitespace>[ ]?)((\\([\\d]{2}\\))|([\\d]{2}))"+
+            "\\k<whitespace>[\\d]{3}\\k<whitespace>[\\d]{2}\\k<whitespace>[\\d]{2}";
+    public static final String MOBILE_PHONE_NUMBER_REG_EX = CITY_PHONE_NUMBER_REG_EX;
+    public static final String MOBILE_PHONE_NUMBER_2_REG_EX = "(" + CITY_PHONE_NUMBER_REG_EX + ")?";
 }

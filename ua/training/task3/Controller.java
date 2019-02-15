@@ -21,9 +21,28 @@ public class Controller {
         model.setSecondName(inputRegExStringWithScanner(Constants.SECOND_NAME_REG_EX, View.SECOND_NAME, sc));
         model.setSurname(inputRegExStringWithScanner(Constants.SURNAME_REG_EX, View.SURNAME, sc));
 
+        model.setShortFullName(inputRegExStringWithScanner(Constants.SHORT_FULL_NAME_REG_EX, View.SHORT_FULL_NAME, sc));
+        model.setNickname(inputRegExStringWithScanner(Constants.NICKNAME_REG_EX, View.NICKNAME, sc));
+        model.setComment(inputRegExStringWithScanner(Constants.COMMENT_REG_EX, View.COMMENT, sc));
+
+        model.setGroups(inputRegExStringWithScanner(Constants.GROUPS_REG_EX, View.GROUPS, sc));
+        model.setCityPhoneNumber(inputRegExStringWithScanner(Constants.CITY_PHONE_NUMBER_REG_EX, View.CITY_PHONE_NUMBER, sc));
+        model.setMobilePhoneNumber(inputRegExStringWithScanner(Constants.MOBILE_PHONE_NUMBER_REG_EX, View.MOBILE_PHONE_NUMBER, sc));
+        model.setMobilePhoneNumber2(inputRegExStringWithScanner(Constants.MOBILE_PHONE_NUMBER_2_REG_EX, View.MOBILE_PHONE_NUMBER_2, sc));
+
+        //print
         view.printMessage(View.NAME, model.getName());
         view.printMessage(View.SECOND_NAME, model.getSecondName());
         view.printMessage(View.SURNAME, model.getSurname());
+
+        view.printMessage(View.SHORT_FULL_NAME, model.getShortFullName());
+        view.printMessage(View.NICKNAME, model.getNickName());
+        view.printMessage(View.COMMENT, model.getComment());
+
+        view.printMessage(View.GROUPS, model.getGroups());
+        view.printMessage(View.CITY_PHONE_NUMBER, model.getCityPhoneNumber());
+        view.printMessage(View.MOBILE_PHONE_NUMBER, model.getMobilePhoneNumber());
+        view.printMessage(View.MOBILE_PHONE_NUMBER_2, model.getMobilePhoneNumber2());
     }
 
     // The Utility methods
