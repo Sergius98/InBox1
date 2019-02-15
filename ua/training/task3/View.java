@@ -17,6 +17,9 @@ public class View {
     public static final String MOBILE_PHONE_NUMBER = "mobile phone number = ";
     public static final String MOBILE_PHONE_NUMBER_2 = "mobile phone number 2(optional) = ";
 
+    public static final String EMAIL = "email = ";
+    public static final String SKYPE = "skype = ";
+
     public static final String SORRY_CAN_YOU_TRY_AGAIN = "Sorry, can you try again?";
     public static final String YOUR_INPUT_SHOULD_MATCHES = "Your Input should matches -> ";
 

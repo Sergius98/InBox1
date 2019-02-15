@@ -12,4 +12,7 @@ public class Constants {
             "\\k<whitespace>[\\d]{3}\\k<whitespace>[\\d]{2}\\k<whitespace>[\\d]{2}";
     public static final String MOBILE_PHONE_NUMBER_REG_EX = CITY_PHONE_NUMBER_REG_EX;
     public static final String MOBILE_PHONE_NUMBER_2_REG_EX = "(" + CITY_PHONE_NUMBER_REG_EX + ")?";
+    public static final String EMAIL_REG_EX = "([A-Za-z0-9]+(\\.|_)?)+@" +
+            "([A-Za-z0-9]+(\\.|\\-)?)+.[A-Za-z]+";
+    public static final String SKYPE_REG_EX = "[A-Za-z][A-Za-z0-9\\.,\\-_]{5,31}";
 }

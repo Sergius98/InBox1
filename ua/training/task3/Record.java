@@ -14,5 +14,6 @@ public class Record {
     String mobilePhoneNumber;
     String mobilePhoneNumber2;
 
-
+    String email;
+    String skype;
 }

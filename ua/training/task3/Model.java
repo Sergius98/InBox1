@@ -40,6 +40,12 @@ public class Model {
         record.mobilePhoneNumber2 = mobilePhoneNumber2;
     }
 
+    public void setEmail(String email){
+        record.email = email;
+    }
+    public void setSkype(String skype){
+        record.skype = skype;
+    }
 
 
     public String getName(){
@@ -74,5 +80,13 @@ public class Model {
     }
     public String getMobilePhoneNumber2(){
         return record.mobilePhoneNumber2;
+    }
+
+
+    public String getEmail(){
+        return record.email;
+    }
+    public String getSkype(){
+        return record.skype;
     }
 }

@@ -30,6 +30,9 @@ public class Controller {
         model.setMobilePhoneNumber(inputRegExStringWithScanner(Constants.MOBILE_PHONE_NUMBER_REG_EX, View.MOBILE_PHONE_NUMBER, sc));
         model.setMobilePhoneNumber2(inputRegExStringWithScanner(Constants.MOBILE_PHONE_NUMBER_2_REG_EX, View.MOBILE_PHONE_NUMBER_2, sc));
 
+        model.setEmail(inputRegExStringWithScanner(Constants.EMAIL_REG_EX, View.EMAIL, sc));
+        model.setSkype(inputRegExStringWithScanner(Constants.SKYPE_REG_EX, View.SKYPE, sc));
+
         //print
         view.printMessage(View.NAME, model.getName());
         view.printMessage(View.SECOND_NAME, model.getSecondName());
@@ -43,6 +46,9 @@ public class Controller {
         view.printMessage(View.CITY_PHONE_NUMBER, model.getCityPhoneNumber());
         view.printMessage(View.MOBILE_PHONE_NUMBER, model.getMobilePhoneNumber());
         view.printMessage(View.MOBILE_PHONE_NUMBER_2, model.getMobilePhoneNumber2());
+
+        view.printMessage(View.EMAIL, model.getEmail());
+        view.printMessage(View.SKYPE, model.getSkype());
     }
 
     // The Utility methods
