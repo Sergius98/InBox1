@@ -15,40 +15,51 @@ public class Controller {
     // The Work method
     public void processUser(){
         Scanner sc = new Scanner(System.in);
-        boolean won = false;
 
-        model.setName(inputRegExStringWithScanner(Constants.NAME_REG_EX, View.NAME, sc));
-        model.setSecondName(inputRegExStringWithScanner(Constants.SECOND_NAME_REG_EX, View.SECOND_NAME, sc));
-        model.setSurname(inputRegExStringWithScanner(Constants.SURNAME_REG_EX, View.SURNAME, sc));
+        model.getRecord().setName(inputRegExStringWithScanner(Constants.NAME_REG_EX, View.NAME, sc));
+        model.getRecord().setSecondName(inputRegExStringWithScanner(Constants.SECOND_NAME_REG_EX, View.SECOND_NAME, sc));
+        model.getRecord().setSurname(inputRegExStringWithScanner(Constants.SURNAME_REG_EX, View.SURNAME, sc));
 
-        model.setShortFullName(inputRegExStringWithScanner(Constants.SHORT_FULL_NAME_REG_EX, View.SHORT_FULL_NAME, sc));
-        model.setNickname(inputRegExStringWithScanner(Constants.NICKNAME_REG_EX, View.NICKNAME, sc));
-        model.setComment(inputRegExStringWithScanner(Constants.COMMENT_REG_EX, View.COMMENT, sc));
+        //model.setShortFullName(inputRegExStringWithScanner(Constants.SHORT_FULL_NAME_REG_EX, View.SHORT_FULL_NAME, sc));
+        model.getRecord().setNickname(inputRegExStringWithScanner(Constants.NICKNAME_REG_EX, View.NICKNAME, sc));
+        model.getRecord().setComment(inputRegExStringWithScanner(Constants.COMMENT_REG_EX, View.COMMENT, sc));
 
-        model.setGroups(inputRegExStringWithScanner(Constants.GROUPS_REG_EX, View.GROUPS, sc));
-        model.setCityPhoneNumber(inputRegExStringWithScanner(Constants.CITY_PHONE_NUMBER_REG_EX, View.CITY_PHONE_NUMBER, sc));
-        model.setMobilePhoneNumber(inputRegExStringWithScanner(Constants.MOBILE_PHONE_NUMBER_REG_EX, View.MOBILE_PHONE_NUMBER, sc));
-        model.setMobilePhoneNumber2(inputRegExStringWithScanner(Constants.MOBILE_PHONE_NUMBER_2_REG_EX, View.MOBILE_PHONE_NUMBER_2, sc));
+        model.getRecord().setGroups(inputRegExStringWithScanner(Constants.GROUPS_REG_EX, View.GROUPS, sc));
+        model.getRecord().setCityPhoneNumber(inputRegExStringWithScanner(Constants.CITY_PHONE_NUMBER_REG_EX, View.CITY_PHONE_NUMBER, sc));
+        model.getRecord().setMobilePhoneNumber(inputRegExStringWithScanner(Constants.MOBILE_PHONE_NUMBER_REG_EX, View.MOBILE_PHONE_NUMBER, sc));
+        model.getRecord().setMobilePhoneNumber2(inputRegExStringWithScanner(Constants.MOBILE_PHONE_NUMBER_2_REG_EX, View.MOBILE_PHONE_NUMBER_2, sc));
 
-        model.setEmail(inputRegExStringWithScanner(Constants.EMAIL_REG_EX, View.EMAIL, sc));
-        model.setSkype(inputRegExStringWithScanner(Constants.SKYPE_REG_EX, View.SKYPE, sc));
+        model.getRecord().setEmail(inputRegExStringWithScanner(Constants.EMAIL_REG_EX, View.EMAIL, sc));
+        model.getRecord().setSkype(inputRegExStringWithScanner(Constants.SKYPE_REG_EX, View.SKYPE, sc));
+
+        model.getRecord().setPostCode(inputRegExStringWithScanner(Constants.POST_CODE_REG_EX, View.POST_CODE, sc));
+        model.getRecord().setCity(inputRegExStringWithScanner(Constants.CITY_REG_EX, View.CITY, sc));
+        model.getRecord().setStreet(inputRegExStringWithScanner(Constants.STREET_REG_EX, View.STREET, sc));
+        model.getRecord().setHouse(inputRegExStringWithScanner(Constants.HOUSE_REG_EX, View.HOUSE, sc));
+        model.getRecord().setAppartment(inputRegExStringWithScanner(Constants.APPARTMENT_REG_EX, View.APPARTMENT, sc));
 
         //print
-        view.printMessage(View.NAME, model.getName());
-        view.printMessage(View.SECOND_NAME, model.getSecondName());
-        view.printMessage(View.SURNAME, model.getSurname());
+        view.printMessage(View.NAME, model.getRecord().getName());
+        view.printMessage(View.SECOND_NAME, model.getRecord().getSecondName());
+        view.printMessage(View.SURNAME, model.getRecord().getSurname());
 
-        view.printMessage(View.SHORT_FULL_NAME, model.getShortFullName());
-        view.printMessage(View.NICKNAME, model.getNickName());
-        view.printMessage(View.COMMENT, model.getComment());
+        //view.printMessage(View.SHORT_FULL_NAME, model.getShortFullName());
+        view.printMessage(View.NICKNAME, model.getRecord().getNickname());
+        view.printMessage(View.COMMENT, model.getRecord().getComment());
 
-        view.printMessage(View.GROUPS, model.getGroups());
-        view.printMessage(View.CITY_PHONE_NUMBER, model.getCityPhoneNumber());
-        view.printMessage(View.MOBILE_PHONE_NUMBER, model.getMobilePhoneNumber());
-        view.printMessage(View.MOBILE_PHONE_NUMBER_2, model.getMobilePhoneNumber2());
+        view.printMessage(View.GROUPS, model.getRecord().getGroups());
+        view.printMessage(View.CITY_PHONE_NUMBER, model.getRecord().getCityPhoneNumber());
+        view.printMessage(View.MOBILE_PHONE_NUMBER, model.getRecord().getMobilePhoneNumber());
+        view.printMessage(View.MOBILE_PHONE_NUMBER_2, model.getRecord().getMobilePhoneNumber2());
 
-        view.printMessage(View.EMAIL, model.getEmail());
-        view.printMessage(View.SKYPE, model.getSkype());
+        view.printMessage(View.EMAIL, model.getRecord().getEmail());
+        view.printMessage(View.SKYPE, model.getRecord().getSkype());
+
+        view.printMessage(View.POST_CODE, model.getRecord().getPostCode());
+        view.printMessage(View.CITY, model.getRecord().getCity());
+        view.printMessage(View.STREET, model.getRecord().getStreet());
+        view.printMessage(View.HOUSE, model.getRecord().getHouse());
+        view.printMessage(View.APPARTMENT, model.getRecord().getAppartment());
     }
 
     // The Utility methods
